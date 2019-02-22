@@ -9,7 +9,15 @@
 						p TimePieces that make a statement up to 
 							strong 40% off
 						a Start Buying
-				
+		.double-card-container
+			.card-item
+				span CATCH BIG <br/>
+					strong DEALS 
+					| OF THE <br/> 
+					| CAMERAS
+				strong shop now
+			.card-item
+				span TABLETS, SMARTPHONES AND MORE
 </template>
 
 <script>

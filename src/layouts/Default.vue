@@ -25,7 +25,7 @@
 						v-list-tile(v-for='(item, index) in items', :key='index', @click='')
 							v-list-tile-title {{ item.title }}
 				v-text-field.subheader-search( height="30", hide-details, solo, label='Append outer', append-outer-icon='icon-magnifying-glass')
-		v-container.container-no-top
+		v-container.container-no-top.g-container
 			slot
 </template>
 
