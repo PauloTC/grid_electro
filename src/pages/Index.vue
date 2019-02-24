@@ -42,10 +42,14 @@
 						em ALL-NEW-SPORT
 						h3 4K 
 						span CAMERAS
-					figure.announce-img
-						img( src="" )
-					.announce-price STARTING AT
-						span $7999
+					.announce-price 
+						em STARTING AT
+						span 
+							strong.money $
+							|79 
+							strong 99
+				figure.announce-img
+					img( src="https://c1.mifile.cn/f/i/2014/cn/yicamera/video-intro.png" height=200 width=300  )
 				v-btn.g-btn Start Buying
 				
 					

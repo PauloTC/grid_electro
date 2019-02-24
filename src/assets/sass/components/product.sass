@@ -2,6 +2,24 @@
     padding: 13px
     padding-top: 30px
     background: #fff
+    position: relative
+    figure
+        &:after
+                content: ''
+                height: 300px
+                width: 2px
+                background: #eaeaea
+                position: absolute
+                right: 20px
+                top: 0
+                bottom: 0
+                margin: auto
+.tab-conainter
+    .VueCarousel-slide
+        &:nth-child(3)
+                figure
+                    &:after
+                            display: none !important
 .product-tag
     font-size: 12px
 .product-name
