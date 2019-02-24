@@ -40,3 +40,38 @@
         color: #fff !important
         width: 60px
         font-size: 18px
+.subheader-menu
+    .v-list
+        > div
+                position: relative
+                &:before
+                        content:  ''
+                        height:  1px
+                        background: #dddddd
+                        position: absolute
+                        left: 0
+                        right: 0
+                        bottom: 0
+                        width: 90%
+                        margin: auto
+                &:last-child
+                        &:before
+                                display: none
+                .v-list__tile__title
+                    font-size: 14px
+    .v-list__tile
+        height:  35px !important
+    .v-expansion-panel__header
+        font-size: 14px
+        font-weight: bold
+    .v-expansion-panel__container
+        background-color: transparent !important
+    .v-expansion-panel__container
+        flex: none
+    .v-expansion-panel
+        box-shadow:  none !important
+        width:  auto !important
+    .v-expansion-panel__body
+        position: absolute
+        width: 270px
+        border: 2px solid #fed700

@@ -1,4 +1,5 @@
 @import './header.sass'
+@import './components/product.sass'
 
 body,
 .application
@@ -12,11 +13,20 @@ body,
     padding-top: 20px
     padding-left: 0
     padding-right: 0
+    display:  flex
+    flex-direction: row-reverse
+.g-btn
+        background-color: #fed700 !important
+        box-shadow:  none !important
+        border-radius:  10px !important
+        font-size: 16px
 //CARROUSEL 
-.carousel_container
+.content-data
     width: 870px
+    max-width: 100%
     margin: 0 0 0 auto
     margin-bottom: 20px
+.carousel_container
     img
         max-width: 100%
         height: auto
@@ -30,6 +40,9 @@ body,
     position: absolute
     left: 45px
     top: 65px
+    button
+        margin: 0
+        margin-top: 30px
     p,span
         text-transform: uppercase
         color: #333e48
@@ -55,10 +68,56 @@ body,
     height:  182px
     background: #f5f5f5
     margin-right: 10px
+    display:  flex
+    justify-content: flex-end
     span
         font-size: 19px
         line-height: 26px
-    > strong
-            display: block
     &:last-child
             margin-right: 0
+.card-text 
+    align-self: center
+    margin-right: 40px
+    > strong
+            display: block
+            margin-top: 20px
+.tab-conainter
+    margin-top: 20px
+//ASIDE
+.aside
+    padding-top: 650px
+.announce-container
+    width: 270px
+    height: 430px
+    background: #3d3b3a
+    margin-bottom: 30px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+.announce-info
+    display:  flex
+    align-items:  center
+.announce-name
+    display: flex
+    flex-direction: column
+    align-items: center
+    color: #fff
+    em
+        font-size: 12px
+        font-weight: 700
+    h3
+        font-size: 68px
+        font-weight: 300
+        line-height:  65px
+    span
+        font-size: 18px
+        font-weight: 300
+        letter-spacing:  1px  
+.announce-price
+    display: flex
+    flex-direction: column
+    align-content: center
+    color: #fff
+    span
+        text-align: center
