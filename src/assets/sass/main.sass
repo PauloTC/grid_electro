@@ -4,7 +4,10 @@
 body,
 .application
     font-family: 'Open Sans', sans-serif !important
-
+li
+    list-style:  none
+p
+    margin: 0
 .g-container
     max-width: 1180px
     margin: auto
@@ -31,6 +34,10 @@ body,
         max-width: 100%
         height: auto
         display: block
+    .VueCarousel-dot-container
+        position: absolute
+        bottom: 20px
+        left: 5%
     .VueCarousel-pagination
         position: absolute
         bottom: 0
@@ -39,7 +46,7 @@ body,
     .VueCarousel-dot
             background-color: #bcbcbc !important
     .VueCarousel-dot--active
-        background-color: red  !important
+        background-color: #fed700  !important
 .carousel-coment
     position: absolute
     left: 45px
@@ -85,10 +92,14 @@ body,
     > strong
             display: block
             margin-top: 20px
-.tab-conainter
+.tab-container
     margin-top: 20px
+    .accent
+        background-color: #fed700 !important
+        border-color: #fed700 !important
 //ASIDE
 .aside
+    width:  270px
     padding-top: 650px
 .announce-container
     width: 270px
@@ -146,3 +157,48 @@ body,
         top: 22px
     .money
         right:  95%
+//ASIDE SLIDER
+.image-aside
+    width: 100px
+    height:  93px
+    background: steelblue
+.aside-lastest-products
+    display: flex
+    margin-bottom: 20px
+.aside-lastest-info
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    margin-left: 18px
+    padding: 10px 0px
+    padding-right:  8px
+    p
+        font-weight: bold
+.lastest-products
+    h3
+        font-weight: normal
+        font-size: 18px
+        margin-bottom: 17px
+.lastest-products-product
+    padding-top: 20px
+    border-top: 2px solid #fed700
+//BESTSELLER PRODUCT
+.bestseller-product
+    display:  flex
+    // width: 50%
+    margin-bottom: 25px
+.bestseller-desc
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding:  15px 0px
+.bestseller-container
+    display: flex
+    flex-wrap: wrap
+.bestseller_carrousel
+    .VueCarousel-inner
+        display: flex !important
+        flex-wrap: wrap
+        > div
+                min-width:  400px
+

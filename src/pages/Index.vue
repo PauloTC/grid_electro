@@ -4,12 +4,12 @@
 			div.carousel_container
 				carousel( :perPage=1)
 					slide(v-for="(item, index  ) in items"  :key="index" )
-						img( :src="item.src"  width=870 height=420 )
-						div.carousel-coment
-							span SHOP to get what you love
-							p TimePieces that make a statement up to 
-								strong 40% off
-							v-btn.g-btn(large) Start Buying
+						img(  src="https://img.staticbg.com/images/oaupload/banggood/images/69/30/f90fbb10-9c2f-400e-895d-3b463f324965.jpg"  width=1200  )
+						//- div.carousel-coment
+						//- 	span SHOP to get what you love
+						//- 	p TimePieces that make a statement up to 
+						//- 		strong 40% off
+						//- 	v-btn.g-btn(large) Start Buying
 			.double-card-container
 				.card-item
 					.card-text
@@ -23,7 +23,7 @@
 						span TABLETS,  <br/> 
 							| SMARTPHONES <br/> 
 							| AND MORE
-			.tab-conainter
+			.tab-container
 				template
 					div
 						v-tabs(v-model='active' fixed-tabs )
@@ -35,6 +35,19 @@
 										Product( :product="product" )
 						.text-xs-center.mt-3
 							v-btn(@click='next') next tab
+			.tab-container
+				template
+					div.bestseller_carrousel
+						//- BestSellerProduct( v-for='( product, index ) in 4'  :key="index" )
+						v-tabs(v-model='active' fixed-tabs )
+							v-tab(v-for='(product, index) in bestSeller', :key='index', ripple='')
+								| {{ product.section }}
+							v-tab-item(v-for='(item, index) in bestSeller', :key='index')
+								carousel( :perPage=4 )
+									slide( v-for="(product, index) in item.products" :key="index" )
+										BestSellerProduct
+						.text-xs-center.mt-3
+							v-btn(@click='next2') next tab
 		.aside
 			li.announce-container
 				.announce-info
@@ -51,16 +64,30 @@
 				figure.announce-img
 					img( src="https://c1.mifile.cn/f/i/2014/cn/yicamera/video-intro.png" height=200 width=300  )
 				v-btn.g-btn Start Buying
-				
+			li.lastest-products
+				h3 Latest Products	
+				template
+					div.lastest-products-product
+						carousel( :perPage="1" )
+							slide(v-for='(product, index) in productsAside', :key='index')
+								li.aside-lastest-products(v-for='(item, index) in product.products', :key='index')
+									figure
+										img( src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGVCnyeLoco-ezPTQRRZuo5lYTsNo_e7XtHYv5DbmKg2goI7ly" )
+									.aside-lastest-info
+										span {{ item.name }}
+										p ${{ item.price  }}
+
 					
 </template>
 
 <script>
 import Product from '../components/Product.vue'
+import BestSellerProduct from  '../components/BestSellerProduct.vue'
 
 export default {
 	components: {
-		Product
+		Product,
+		BestSellerProduct
 	},
 	 data () {
 		return {
@@ -94,7 +121,7 @@ export default {
 							},
 							{
 								image: 'http://megatel.com.cy/2028-thickbox_default/xiaomi-mi-pocket-speaker-2-generation-white.jpg',
-								name: "Purple Solo 2 Wireless"
+								name: "Purple Solo 2 Wireless Headset"
 							}
 						]
 					},
@@ -111,7 +138,7 @@ export default {
 							},
 							{
 								image: 'http://megatel.com.cy/2028-thickbox_default/xiaomi-mi-pocket-speaker-2-generation-white.jpg',
-								name: "Purple Solo 2 Wireless"
+								name: "Purple Solo 2 Wireless Headset"
 							}
 						]
 					},
@@ -128,7 +155,219 @@ export default {
 							},
 							{
 								image: 'http://megatel.com.cy/2028-thickbox_default/xiaomi-mi-pocket-speaker-2-generation-white.jpg',
-								name: "Purple Solo 2 Wireless"
+								name: "Purple Solo 2 Wireless Headset"
+							}
+						]
+					}
+				],
+				productsAside:[
+					{
+						name:  "Latest Products",
+						products: [
+							{
+								name: "Purple Solo 2 Wireless",
+								price: "49,00",
+								image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGVCnyeLoco-ezPTQRRZuo5lYTsNo_e7XtHYv5DbmKg2goI7ly"
+							},
+							{
+								name: "producto 2",
+								price: "49,00"
+							},
+							{
+								name: "producto 3",
+								price: "49,00"
+							},
+							{
+								name: "Purple Solo 2 Wireless",
+								price: "49,00"
+							},
+							{
+								name: "producto 2",
+								price: "49,00"
+							},
+							{
+								name: "producto 3",
+								price: "49,00"
+							}
+						]
+					},
+					{
+						name:  "Latest Products 2",
+						products: [
+							{
+								name: "Purple Solo 2 Wireless",
+								price: "49,00"
+							},
+							{
+								name: "producto 2",
+								price: "49,00"
+							},
+							{
+								name: "producto 3",
+								price: "49,00"
+							},
+							{
+								name: "Purple Solo 2 Wireless",
+								price: "49,00"
+							},
+							{
+								name: "producto 2",
+								price: "49,00"
+							},
+							{
+								name: "producto 3",
+								price: "49,00"
+							}
+						]
+					},
+					{
+						name:  "Latest Products 3",
+						products: [
+							{
+								name: "Purple Solo 2 Wireless",
+								price: "49,00"
+							},
+							{
+								name: "producto 2",
+								price: "49,00"
+							},
+							{
+								name: "producto 3",
+								price: "49,00"
+							},
+							{
+								name: "Purple Solo 2 Wireless",
+								price: "49,00"
+							},
+							{
+								name: "producto 2",
+								price: "49,00"
+							},
+							{
+								name: "producto 3",
+								price: "49,00"
+							}
+						]
+					}
+				],
+				bestSeller: [
+					{
+						section: "Top 20" ,
+						products: [
+							{
+								name: "Purple Solo 2 Wireless",
+								price: "49,00",
+								image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGVCnyeLoco-ezPTQRRZuo5lYTsNo_e7XtHYv5DbmKg2goI7ly"
+							},
+							{
+								name: "producto 2",
+								price: "49,00"
+							},
+							{
+								name: "producto 3",
+								price: "49,00"
+							},
+							{
+								name: "Purple Solo 2 Wireless",
+								price: "49,00"
+							},
+							{
+								name: "producto 2",
+								price: "49,00"
+							},
+							{
+								name: "producto 3",
+								price: "49,00"
+							}
+						]
+					},
+					{
+						section: "Phones & Tablets",
+						products: [
+							{
+								name: "Purple Solo 2 Wireless",
+								price: "49,00",
+								image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGVCnyeLoco-ezPTQRRZuo5lYTsNo_e7XtHYv5DbmKg2goI7ly"
+							},
+							{
+								name: "producto 2",
+								price: "49,00"
+							},
+							{
+								name: "producto 3",
+								price: "49,00"
+							},
+							{
+								name: "Purple Solo 2 Wireless",
+								price: "49,00"
+							},
+							{
+								name: "producto 2",
+								price: "49,00"
+							},
+							{
+								name: "producto 3",
+								price: "49,00"
+							}
+						]
+					},
+					{
+						section: "Laptops & Computers",
+						products: [
+							{
+								name: "Purple Solo 2 Wireless",
+								price: "49,00",
+								image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGVCnyeLoco-ezPTQRRZuo5lYTsNo_e7XtHYv5DbmKg2goI7ly"
+							},
+							{
+								name: "producto 2",
+								price: "49,00"
+							},
+							{
+								name: "producto 3",
+								price: "49,00"
+							},
+							{
+								name: "Purple Solo 2 Wireless",
+								price: "49,00"
+							},
+							{
+								name: "producto 2",
+								price: "49,00"
+							},
+							{
+								name: "producto 3",
+								price: "49,00"
+							}
+						]
+					},
+					{
+						section: "Video Cameras",
+						products: [
+							{
+								name: "Purple Solo 2 Wireless",
+								price: "49,00",
+								image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGVCnyeLoco-ezPTQRRZuo5lYTsNo_e7XtHYv5DbmKg2goI7ly"
+							},
+							{
+								name: "producto 2",
+								price: "49,00"
+							},
+							{
+								name: "producto 3",
+								price: "49,00"
+							},
+							{
+								name: "Purple Solo 2 Wireless",
+								price: "49,00"
+							},
+							{
+								name: "producto 2",
+								price: "49,00"
+							},
+							{
+								name: "producto 3",
+								price: "49,00"
 							}
 						]
 					}
@@ -138,6 +377,10 @@ export default {
 	},
 	methods: {
 		next () {
+			const active = parseInt(this.active)
+			this.active = (active < 2 ? active + 1 : 0)
+		},
+		next2(){
 			const active = parseInt(this.active)
 			this.active = (active < 2 ? active + 1 : 0)
 		}
