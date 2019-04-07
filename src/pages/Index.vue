@@ -12,17 +12,28 @@
 						//- 	v-btn.g-btn(large) Start Buying
 			.double-card-container
 				.card-item
+					figure
+						img( width=180 src="http://tinyimg.io/i/CQxruXQ.png" )
 					.card-text
 						span CATCH BIG <br/>
 							strong DEALS 
 							| OF THE <br/> 
 							| CAMERAS
-						strong shop now
+						strong Shop now
+							a.gotodetail( href="#"  )
+								i( style="background-image: url('http://tinyimg.io/i/O1LGnWi.png') " )
 				.card-item
+					figure
+						img( width="200" src="http://tinyimg.io/i/9K7sNIv.png" )
 					.card-text
 						span TABLETS,  <br/> 
 							| SMARTPHONES <br/> 
 							| AND MORE
+						em
+							| From
+							strong 	$749	
+								a.gotodetail( href="#" )
+									i( style="background-image: url('http://tinyimg.io/i/O1LGnWi.png') " )
 			.tab-container
 				template
 					div

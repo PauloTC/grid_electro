@@ -1,7 +1,7 @@
 <template  lang="pug" >
 	v-app
-		v-toolbar
-			v-toolbar-title Gridsome
+		v-toolbar.toolbar-menu
+			v-toolbar-title MiTienda
 			v-spacer
 			v-toolbar-items
 				v-btn( flat :to="{ name: 'home' }") Home
@@ -15,7 +15,7 @@
 				p 
 					span Support
 					| (+800) 856 800 604
-				p E-mail: info@electro.com
+				p E-mail: info@electronic.com
 		div.subheader-menu
 			.g-container
 				v-expansion-panel(  v-model="panel" expand)
