@@ -59,6 +59,17 @@
 										BestSellerProduct
 						.text-xs-center.mt-3
 							v-btn(@click='next2') next tab
+			.smart-tv-card
+				.smart-tv-info
+					h3 smar
+						em TV
+					.smart-coment
+						p Now with 4k
+					.smart-tv-price
+						em from
+							b $749
+				figure
+					img( width=310 src="http://tinyimg.io/i/vDgqYlS.png" )
 		.aside
 			li.announce-container
 				.announce-info

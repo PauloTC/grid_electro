@@ -248,10 +248,64 @@ p
 .bestseller-container
     display: flex
     flex-wrap: wrap
-.bestseller_carrousel
-    .VueCarousel-inner
-        display: flex !important
-        flex-wrap: wrap
-        > div
-                min-width:  400px
+// .bestseller_carrousel
+//     .VueCarousel-inner
+//         display: flex !important
+//         flex-wrap: wrap
+//         > div
+//                 min-width:  400px
 
+//SMART TV SECTION
+.smart-tv-card
+    background: #18171c
+    color: #fff
+    height: 270px
+    display: flex
+    align-items: center
+    padding-left: 50px
+    justify-content: space-between
+    h3
+        display: flex
+        font-size: 49px
+        font-weight: normal
+        flex-wrap: wrap
+        line-height: 40px
+        em
+            font-style: normal
+            font-weight: 300
+            font-size: 36px
+            display: flex
+            align-items: center
+            margin-top: 3px
+            color: #34bcec
+    figure
+        padding-bottom: 80px
+        padding-right: 30px
+    .smart-coment
+        text-align: right
+        margin-bottom: 14px
+        p
+            font-weight: 300
+            font-size: 15px
+            width: 100%
+.smart-tv-info
+    position: relative
+    &:before
+            content: ''
+            display: block
+            position: absolute
+            height: 50%
+            width: 1px
+            background: #49484c
+            left: 130%
+            top: 0
+            bottom:  0
+            margin: auto
+.smart-tv-price
+    em
+        display: flex
+        flex-direction: column
+        font-style: normal
+    b
+        font-size: 54px
+        text-align: right
